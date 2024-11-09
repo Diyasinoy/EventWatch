@@ -1,1 +1,1 @@
-# EventWatch
+The Event Watch System is a centralized platform for managing college events, featuring a calendar with highlighted dates, detailed event info, and user login for personalized access. It keeps students and faculty informed about departmental activities, club events, workshops, and seminars at a glance.
