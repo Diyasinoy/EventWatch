@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="events-container">
+    <h1>Upcoming Events</h1>
+    <div class="events-grid">
+        {% for event in events %}
+        <div class="event-card">
+            <h2>{{ event.title }}</h2>
+            <p>{{ event.description }}</p>
+            <div class="event-details">
+                <span>📅 {{ event.date.strftime('%B %d, %Y') }}</span>
+                <span>🕒 {{ event.time.strftime('%I:%M %p') }}</span>
+                <span>📍 {{ event.venue }}</span>
+            </div>
+            {% if current_user.is_authenticated %}
+            <button class="register-btn" data-event-id="{{ event.id }}">Register</button>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %} 
